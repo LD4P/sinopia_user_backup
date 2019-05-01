@@ -25,6 +25,6 @@ $ npm test
 The CircleCI build is configured to perform these steps automatically on any successful build on the `master` branch. If you need to manually build and push an image, you can do this:
 
 ```shell
-$ docker build -t ld4p/sinopia_user_backup:latest.
+$ docker build -t ld4p/sinopia_user_backup:latest .
 $ docker push ld4p/sinopia_user_backup:latest
 ```
