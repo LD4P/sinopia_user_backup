@@ -9,6 +9,9 @@
     "lint": "eslint --color -c .eslintrc.js --ext js .",
     "test": "jest --colors --passWithNoTests"
   },
+  "engines": {
+    "node": "10.15.*"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LD4P/sinopia_user_backup.git"
@@ -34,6 +37,7 @@
     }
   ],
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jest": "^22.5.1",
@@ -42,6 +46,12 @@
     "jest": "^24.7.1"
   },
   "dependencies": {
-    "@babel/node": "^7.2.2"
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/runtime": "^7.4.4",
+    "babel-plugin-dotenv": "^0.1.1",
+    "config": "^3.1.0",
+    "dotenv": "^7.0.0"
   }
 }
