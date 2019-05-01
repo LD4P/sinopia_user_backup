@@ -1,0 +1,40 @@
+{
+  "name": "sinopia_user_backup",
+  "version": "0.0.1",
+  "description": "A Node component for backing up the Cognito user pool for Sinopia",
+  "bin": {
+    "backup": "bin/backup"
+  },
+  "scripts": {
+    "eslint": "eslint --color -c .eslintrc.js --ext js .",
+    "test": "jest --colors --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LD4P/sinopia_user_backup.git"
+  },
+  "keywords": [
+    "sinopia",
+    "aws",
+    "cognito",
+    "user",
+    "backup",
+    "node",
+    "javascript"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/LD4P/sinopia_user_backup/issues"
+  },
+  "homepage": "https://github.com/LD4P/sinopia_user_backup#readme",
+  "contributors": [
+    {
+      "name": "Michael J. Giarlo",
+      "email": "leftwing@alumni.rutgers.edu"
+    }
+  ],
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "jest": "^24.7.1"
+  }
+}
