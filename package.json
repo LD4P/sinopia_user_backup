@@ -7,7 +7,7 @@
   },
   "scripts": {
     "lint": "eslint --color -c .eslintrc.js --ext js .",
-    "test": "jest --colors --passWithNoTests"
+    "test": "jest --colors"
   },
   "engines": {
     "node": "10.15.*"
