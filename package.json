@@ -6,8 +6,8 @@
     "backup": "bin/backup"
   },
   "scripts": {
-    "eslint": "eslint --color -c .eslintrc.js --ext js .",
-    "test": "jest --colors --runInBand"
+    "lint": "eslint --color -c .eslintrc.js --ext js .",
+    "test": "jest --colors --passWithNoTests"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,10 @@
   ],
   "devDependencies": {
     "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-security": "^1.4.0",
     "jest": "^24.7.1"
   }
 }

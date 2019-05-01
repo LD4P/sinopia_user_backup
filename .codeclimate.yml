@@ -1,0 +1,21 @@
+version: "2"
+
+exclude_patterns:
+  - "__tests__/"
+  - 'eslintrc.js'
+  - 'jest.config.js'
+  - '**/node_modules/'
+
+plugins:
+  eslint:
+    enabled: true
+    config:
+      config: .eslintrc.js
+    channel: "eslint-5"
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript:
+  nodesecurity:
+    enabled: true
