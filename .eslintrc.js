@@ -30,6 +30,8 @@ module.exports = {
         //   rule supposedly matches ECMA version with node
         //   we get: "Import and export declarations are not supported yet"
         "node/no-unsupported-features/es-syntax": "off",
+        // Avoiding: "warning  Found fs.readFileSync with non literal argument ..."
+        "security/detect-non-literal-fs-filename": "off",
         // this is a CLI tool; we DO want to send output to console
         "no-console": "off",
       }
