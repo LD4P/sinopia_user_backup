@@ -13,7 +13,7 @@ export default class CopyUsers {
   copy() {
     this.s3.putObject({
       Body: this.userListString,
-      Bucket: config.get('s3BucketUri'),
+      Bucket: config.get('s3Bucket'),
       Key: this.objectKey
     }, error => {
       if (error) {
