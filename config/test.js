@@ -3,5 +3,5 @@ module.exports = {
   awsAccessSecret: 'secret',
   awsRegion: 'my-region-1',
   s3Bucket: 'my-bucket-name',
-  userPoolId: 'my-region_1_uSeRPoOlId'
+  userPoolId: 'my-region-1_uSeRPoOlId'
 }

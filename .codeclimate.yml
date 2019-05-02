@@ -2,6 +2,7 @@ version: "2"
 
 exclude_patterns:
   - "__tests__/"
+  - "__mocks__/"
   - 'eslintrc.js'
   - 'jest.config.js'
   - '**/node_modules/'
