@@ -6,6 +6,7 @@
     "backup": "bin/backup"
   },
   "scripts": {
+    "ci": "jest --colors --ci --coverage",
     "lint": "eslint --color -c .eslintrc.js --ext js .",
     "test": "jest --colors"
   },
@@ -17,13 +18,13 @@
     "url": "git+https://github.com/LD4P/sinopia_user_backup.git"
   },
   "keywords": [
-    "sinopia",
     "aws",
-    "cognito",
-    "user",
     "backup",
+    "cognito",
+    "javascript",
     "node",
-    "javascript"
+    "s3",
+    "sinopia"
   ],
   "license": "Apache-2.0",
   "bugs": {

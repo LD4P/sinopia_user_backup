@@ -36,10 +36,10 @@ jobs:
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
       - run:
-          name: Run unit tests
+          name: Run unit tests and send coverage results
           command: |
             ./cc-test-reporter before-build
-            npm test
+            npm run ci
             ./cc-test-reporter after-build --exit-code $?
   register_image:
     <<: *defaults
