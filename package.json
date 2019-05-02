@@ -6,9 +6,9 @@
     "backup": "bin/backup"
   },
   "scripts": {
-    "ci": "jest --colors --ci --coverage",
+    "ci": "AWS_PROFILE=foobarbazquux jest --colors --ci --coverage",
     "lint": "eslint --color -c .eslintrc.js --ext js .",
-    "test": "jest --colors"
+    "test": "AWS_PROFILE=foobarbazquux jest --colors"
   },
   "engines": {
     "node": "10.15.*"
@@ -44,7 +44,8 @@
     "eslint-plugin-jest": "^22.5.1",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-security": "^1.4.0",
-    "jest": "^24.7.1"
+    "jest": "^24.7.1",
+    "lodash": "^4.17.11"
   },
   "dependencies": {
     "@babel/core": "^7.4.4",
