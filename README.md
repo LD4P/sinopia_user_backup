@@ -4,9 +4,24 @@
 
 # sinopia_user_backup
 
-A Node application that backs up Cognito user pools for the Sinopia project.
+A Node application that backs up AWS Cognito user pools to AWS S3. The application stores backups in S3 with the following structure: `{DATESTAMP}/user-backup_{TIMESTAMP}_{USER_POOL_ID}.json`
+
+Requires configuration via environment variables:
+
+* `AWS_ACCESS_KEY_ID`: The AWS access key associated with an account that has access to both Cognito and S3
+* `AWS_SECRET_ACCESS_KEY`: The AWS access secret associated with an account that has access to both Cognito and S3
+* `AWS_REGION`: The AWS region Cognito and S3 are running within
+* `S3_BUCKET`: The S3 bucket into which user backup data should be copied
+* `COGNITO_USER_POOL_ID`: The Cognito user pool to backup
 
 ## Testing
+
+A `docker-compose` configuration is included to mimic how the app would be run in a container-based production environment. To run the app, use:
+
+```shell
+# Add -d flag to run in the background
+$ docker-compose up
+```
 
 ### Run the linter
 
