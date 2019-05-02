@@ -6,4 +6,4 @@ COPY . .
 
 RUN npm install
 
-# TODO: Add CMD later once JavaScript package is in place
+CMD ["bin/backup"]
