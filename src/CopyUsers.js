@@ -7,7 +7,9 @@ export default class CopyUsers {
     AWS.config = configureAWS(AWS.config)
     this.userListString = JSON.stringify(userList)
     this.s3 = new AWS.S3()
-    this.objectKey = `${new Date().toISOString()}/${config.get('userPoolId')}.json`
+    const timestamp = new Date().toISOString()
+    const datestamp = timestamp.slice(0, 10)
+    this.objectKey = `${datestamp}/user-backup_${timestamp}_${config.get('userPoolId')}.json`
   }
 
   copy() {

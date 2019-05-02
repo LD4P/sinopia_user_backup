@@ -1,5 +1,9 @@
+// Yes, this is gross, but this is the interface of the dependency we're faking.
+
 export default class CognitoPaginationFake {
   constructor() {
+    // This attr makes sure we can split a result set into paginated chunks
+    // without endless recursion.
     this.calledAlready = false
   }
 

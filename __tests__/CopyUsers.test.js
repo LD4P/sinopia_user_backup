@@ -19,7 +19,7 @@ describe('CopyUsers', () => {
     })
     it('sets objectKey', () => {
       // Matches: {ISO DATE}/{AWS_REGION}_{USER_POOL_ID}.json
-      expect(copier.objectKey).toMatch(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+Z\/my-region-1_uSeRPoOlId\.json/)
+      expect(copier.objectKey).toMatch(/\d{4}-\d{2}-\d{2}\/user-backup_\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+Z_my-region-1_uSeRPoOlId\.json/)
     })
   })
 
@@ -38,6 +38,8 @@ describe('CopyUsers', () => {
         expect(s3Spy).toHaveBeenCalledWith({
           Body: "[{\"Username\":\"user1\"},{\"Username\":\"user2\"}]",
           Bucket: 'my-bucket-name',
+          // The key value includes an ISO representation of a timestamp, so
+          // without gnarly date/time mocking, this is the best I could do here.
           Key: expect.any(String)
         }, expect.any(Function))
         expect(logSpy).toHaveBeenCalledWith('Users backed up to S3')
