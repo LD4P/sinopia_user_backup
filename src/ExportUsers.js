@@ -13,11 +13,12 @@ export default class ExportUsers {
 
     const paginationCalls = async (exportedUsers = []) => {
       const { Users = [], PaginationToken } = await this.cognito.listUsers(params).promise()
+
       const combinedUsers = exportedUsers.concat(Users)
 
       if (PaginationToken) {
         params.PaginationToken = PaginationToken
-        await paginationCalls(combinedUsers)
+        return await paginationCalls(combinedUsers)
       }
 
       return combinedUsers
