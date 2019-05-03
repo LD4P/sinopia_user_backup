@@ -1,0 +1,61 @@
+{
+  "name": "sinopia_user_backup",
+  "version": "0.0.1",
+  "description": "A Node component for backing up the Cognito user pool for Sinopia",
+  "bin": {
+    "backup": "bin/backup"
+  },
+  "scripts": {
+    "ci": "AWS_PROFILE=foobarbazquux jest --colors --ci --coverage",
+    "lint": "eslint --color -c .eslintrc.js --ext js .",
+    "test": "AWS_PROFILE=foobarbazquux jest --colors"
+  },
+  "engines": {
+    "node": "10.15.*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LD4P/sinopia_user_backup.git"
+  },
+  "keywords": [
+    "aws",
+    "backup",
+    "cognito",
+    "javascript",
+    "node",
+    "s3",
+    "sinopia"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/LD4P/sinopia_user_backup/issues"
+  },
+  "homepage": "https://github.com/LD4P/sinopia_user_backup#readme",
+  "contributors": [
+    {
+      "name": "Michael J. Giarlo",
+      "email": "leftwing@alumni.rutgers.edu"
+    }
+  ],
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-security": "^1.4.0",
+    "jest": "^24.7.1",
+    "lodash": "^4.17.11"
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/runtime": "^7.4.4",
+    "aws-sdk": "^2.447.0",
+    "babel-plugin-dotenv": "^0.1.1",
+    "config": "^3.1.0",
+    "dotenv": "^7.0.0"
+  }
+}
