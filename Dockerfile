@@ -1,4 +1,4 @@
-FROM circleci/node:10.15
+FROM circleci/node:14.11
 
 WORKDIR /home/circleci
 

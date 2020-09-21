@@ -11,7 +11,7 @@
     "test": "AWS_PROFILE=foobarbazquux jest --colors"
   },
   "engines": {
-    "node": "10.15.*"
+    "node": "14.11.*"
   },
   "repository": {
     "type": "git",
